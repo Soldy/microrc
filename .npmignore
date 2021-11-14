@@ -47,6 +47,7 @@ typings/
 .nuxt
 dist
 .git
+.github
 .npmignore
 .gitignore
 .editorconfig
