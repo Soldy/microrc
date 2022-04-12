@@ -1,6 +1,6 @@
 {
   "name": "microrc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "pool manager",
   "main": "index.js",
   "scripts": {
