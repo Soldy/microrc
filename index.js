@@ -1,11 +1,11 @@
 'use strict';
 const $setuprc = (require('setuprc')).base;
-const http = require('http');
+const $http = require('http');
 
 
 const _server = function(settings){
     this.start=function(_processor_){
-        http.createServer(function (req, res) {
+        _http = $http.createServer(function (req, res) {
             let _post = '';
             req.on('data', function (chunk) {
                 if(
@@ -31,7 +31,7 @@ const _server = function(settings){
         );
     }
     this.stop=function(){ 
-        http.close();
+        _http.close();
     }
     /*
      * setup  helper
@@ -47,6 +47,8 @@ const _server = function(settings){
             'default' : 8888 
         }
     });
+    let _http;
+
     /*
      *
      * setup init 
